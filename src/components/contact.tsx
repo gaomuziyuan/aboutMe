@@ -7,6 +7,41 @@ import { useSectionInView } from "@/lib/hooks";
 import SubmitBtn from "./submit-btn";
 import toast from "react-hot-toast";
 
+async function sendEmail(formData: FormData) {
+  try {
+    const response = await fetch("/api/sendEmail", {
+      method: "POST",
+      body: formData,
+    });
+
+    if (!response.ok) {
+      throw new Error(`Error: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return { data };
+  } catch (error: any) {
+    return { error: error.message || "Something went wrong" };
+  }
+}
+
+async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  event.preventDefault();
+  const form = event.target as HTMLFormElement;
+  const formData = new FormData(form);
+  for (let [key, value] of formData.entries()) {
+    console.log(key, value);
+  }
+  const { data, error } = await sendEmail(formData);
+
+  if (error) {
+    toast.error(error);
+    return;
+  }
+
+  toast.success("Email sent successfully!");
+}
+
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
 
@@ -38,7 +73,10 @@ export default function Contact() {
         or through this form.
       </p>
 
-      <form className="mt-10 flex flex-col dark:text-black">
+      <form
+        className="mt-10 flex flex-col dark:text-black"
+        onSubmit={handleSubmit}
+      >
         <input
           className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
           name="senderEmail"
