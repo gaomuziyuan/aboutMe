@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
-export async function middleware(req: NextRequest) {}
+
 export async function POST(req: NextRequest, res: NextResponse) {
   const transporter = nodemailer.createTransport({
     // transporter configuration
