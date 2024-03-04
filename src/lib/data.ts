@@ -1,6 +1,8 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { LuGraduationCap } from "react-icons/lu";
+import hero from "../../public/hero.png";
+import dashboard from "../../public/dashboard.png";
 
 export const links = [
   {
@@ -26,6 +28,23 @@ export const links = [
   {
     name: "Contact",
     hash: "#contact",
+  },
+] as const;
+
+export const projectsData = [
+  {
+    title: "Hero Wallet",
+    description:
+      "Mobile financial application in partnership with Hero Financial",
+    tags: ["React Native", "node.js", "MySQL"],
+    imageUrl: hero,
+  },
+  {
+    title: "Top Influencer Marketing Platform",
+    description:
+      "An SEO-optimized web application with Vue.js, enabling influencers to boost audience reach and engagement.",
+    tags: ["React", "JavaScript", "Redux"],
+    imageUrl: dashboard,
   },
 ] as const;
 
