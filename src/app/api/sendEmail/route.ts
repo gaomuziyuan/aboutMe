@@ -13,6 +13,15 @@ export async function POST(req: NextRequest, res: NextResponse) {
   const transporter = nodemailer.createTransport({
     SES: { ses, aws },
   });
+  // const transporter = nodemailer.createTransport({
+  //   host: "email-smtp.us-west-1.amazonaws.com",
+  //   port: 587,
+  //   secure: false,
+  //   auth: {
+  //     user: process.env.AWS_SMTP_KEY_ID, // Access key ID
+  //     pass: process.env.AWS_SMTP_ACCESS_KEY, // Secret access key
+  //   },
+  // });
 
   if (req.method === "POST") {
     try {
