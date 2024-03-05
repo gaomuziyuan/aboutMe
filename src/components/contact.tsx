@@ -9,9 +9,14 @@ import toast from "react-hot-toast";
 
 async function sendEmail(formData: FormData) {
   try {
+    const formDataObject = Object.fromEntries(formData.entries());
+
     const response = await fetch("/api/sendEmail", {
       method: "POST",
-      body: formData,
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formDataObject),
     });
 
     if (!response.ok) {
@@ -29,11 +34,8 @@ async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
   event.preventDefault();
   const form = event.target as HTMLFormElement;
   const formData = new FormData(form);
-  for (let [key, value] of formData.entries()) {
-    console.log(key, value);
-  }
-  const { data, error } = await sendEmail(formData);
 
+  const { data, error } = await sendEmail(formData);
   if (error) {
     toast.error(error);
     return;

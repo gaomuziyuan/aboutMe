@@ -1,9 +1,17 @@
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import aws from "aws-sdk";
+
+aws.config.update({
+  accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+  region: process.env.AWS_REGION,
+});
 
 export async function POST(req: NextRequest, res: NextResponse) {
+  const ses = new aws.SES({ apiVersion: "2010-12-01" });
   const transporter = nodemailer.createTransport({
-    // transporter configuration
+    SES: { ses, aws },
   });
 
   if (req.method === "POST") {
@@ -12,7 +20,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
       const { senderEmail, message } = body;
 
       const mailOptions = {
-        from: "muziyuangao@example.com",
+        from: "muziyuangao@gmail.com",
         to: senderEmail,
         subject: "New Message from Contact Form",
         text: message,
@@ -29,6 +37,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
         { status: 200, headers: { "Content-Type": "application/json" } }
       );
     } catch (error) {
+      console.log(error);
       return new NextResponse(
         JSON.stringify({
           success: false,
