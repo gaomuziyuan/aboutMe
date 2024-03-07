@@ -11,8 +11,8 @@ import ThemeSwitch from "@/components/theme-switch";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Muziyuan(Rossen) Gao | Personal Portfolio",
-  description: "Rossen is a full-stack developer with 5 years of experience.",
+  title: "Muziyuan Gao | Personal Portfolio",
+  description: "Muziyuan is a full-stack developer with 5 years of experience.",
 };
 
 export default function RootLayout({
