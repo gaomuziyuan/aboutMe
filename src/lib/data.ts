@@ -50,6 +50,38 @@ export const projectsData = [
 
 export const experiencesData = [
   {
+    title: "University of Alberta",
+    location: "Edmonton, AB",
+    description:
+      "I graduated from University of Alberta after two years of study.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2017/09",
+  },
+  {
+    title: "Research Assistant at University of Alberta",
+    location: "Edmonton, AB",
+    description:
+      "In this role, I specialized in the collection, manipulation, and analysis of greenhouse gas emissions data to inform and optimize CO2 removal technologies.",
+    icon: React.createElement(CgWorkAlt),
+    date: "2017/10 - 2019/03",
+  },
+  {
+    title: "Data Analyst at Bureau Veritas",
+    location: "Cold Lake, AB",
+    description:
+      "At Bureau Veritas, I monitored boiler water systems through the analysis of produced water samples, utilizing real-time data to optimize plant operations.",
+    icon: React.createElement(CgWorkAlt),
+    date: "2019/04 - 2019/11",
+  },
+  {
+    title: "Data Analyst at Clean Harbors",
+    location: "Edmonton, AB",
+    description:
+      "At Clean Harbors, I developed a pilot-scale drum-boiler heat exchanger for crude oil distillation studies, focusing on data collection and analysis to enhance process efficiency.",
+    icon: React.createElement(CgWorkAlt),
+    date: "2019/11 - 2020/02",
+  },
+  {
     title: "Northern Alberta Institute of Technology",
     location: "Edmonton, AB",
     description:
@@ -61,7 +93,7 @@ export const experiencesData = [
     title: "Software Developer at LawDepot",
     location: "Edmonton, AB",
     description:
-      "At LawDepot, I spearheaded the innovative conversion of complex XML-based legal forms into a streamlined Vue.js web application, overseeing the creation of a custom transpiler that automated this transition. My leadership covered the transpiler project's full development lifecycle, from initial requirements analysis and architectural design to the triumphant deployment in production. I took on the challenge of refactoring intricate XML schemas, employing advanced programming techniques to transform them into scalable and maintainable Vue.js components. In collaboration with a team of skilled software engineers, we developed a robust suite of unit tests, ensuring the reliability and quality of the transpiler logic as well as the Vue.js components it generated.",
+      "At LawDepot, I led the transformation of complex XML-based legal forms into a Vue.js web application, managing the end-to-end development of a custom transpiler.",
     icon: React.createElement(CgWorkAlt),
     date: "2022/03 - 2023/03",
   },
@@ -69,7 +101,7 @@ export const experiencesData = [
     title: "Full-Stack Developer at AlphaPay",
     location: "Vancouver, BC",
     description:
-      "At AlphaPay, I collaboratively developed two web applications using React.js and three cross-platform mobile applications utilizing React Native, I was actively involved in every phase of the app lifecycle, from the initial concept to the final release on the App Store and Google Play. My contributions included the integration of Ingenico and Moneris payment gateways, which not only secured in-app transactions but also heightened customer trust and satisfaction.Furthermore, I spearheaded efforts in database development and optimization, which resulted in a notable 15% improvement in transaction speed alongside a 20% decrease in payment errors.",
+      "At AlphaPay, I collaboratively developed two web applications using React.js and three cross-platform mobile applications utilizing React Native.",
     icon: React.createElement(CgWorkAlt),
     date: "2023/05 - 2023/12",
   },
@@ -77,7 +109,7 @@ export const experiencesData = [
     title: "Full-Stack Developer at V-MAX Media",
     location: "Vancouver, BC",
     description:
-      "At V-MAX Media, I led the development of a web/mobile financial application in partnership with Hero Financial, placing a strong emphasis on a mobile-first and test-driven development methodology utilizing Next.js and React Native. My role involved conducting a thorough analysis and design phase to ensure that the application's features perfectly aligned with user needs, significantly boosting performance through strategic API call management. I played a key role in enhancing the app's international financial operations by integrating the Berkeley and Transfermate APIs, thereby offering advanced payment and currency exchange functionalities. Additionally, I was at the forefront of integrating sophisticated databases and designing data warehouse solutions, substantially improving our data storage and retrieval systems. I also automated continuous integration and continuous deployment (CI/CD) pipelines using GitHub Actions, streamlining the deployment process to AWS EC2.",
+      "At V-MAX Media, in partnership with Hero Financial, I spearheaded the creation of a financial app using Next.js and React Native.",
     icon: React.createElement(CgWorkAlt),
     date: "2023/12 - present",
   },
