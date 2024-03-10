@@ -42,7 +42,7 @@ export const projectsData = [
   {
     title: "Top Influencer Marketing Platform",
     description:
-      "An SEO-optimized web application with Vue.js, enabling influencers to boost audience reach and engagement.",
+      "An SEO-optimized web application with React.js, enabling influencers to boost audience reach and engagement.",
     tags: ["React", "JavaScript", "Redux"],
     imageUrl: dashboard,
   },
