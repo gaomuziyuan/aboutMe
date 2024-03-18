@@ -33,18 +33,19 @@ export const links = [
 
 export const projectsData = [
   {
+    title: "Star Linker - Influencer Marketing Platform",
+    description:
+      "An SEO-optimized web application with React.js, enabling influencers to boost audience reach and engagement.",
+    tags: ["React", "JavaScript", "Redux"],
+    imageUrl: dashboard,
+    prodUrl: "https://star-linker-frontend.vercel.app/",
+  },
+  {
     title: "Hero Wallet",
     description:
       "Mobile financial application in partnership with Hero Financial",
     tags: ["React Native", "node.js", "MySQL"],
     imageUrl: hero,
-  },
-  {
-    title: "Top Influencer Marketing Platform",
-    description:
-      "An SEO-optimized web application with React.js, enabling influencers to boost audience reach and engagement.",
-    tags: ["React", "JavaScript", "Redux"],
-    imageUrl: dashboard,
   },
 ] as const;
 
