@@ -38,7 +38,7 @@ export const projectsData = [
       "An SEO-optimized web application with React.js, enabling influencers to boost audience reach and engagement.",
     tags: ["React", "JavaScript", "Redux"],
     imageUrl: dashboard,
-    prodUrl: "https://star-linker-frontend.vercel.app/",
+    prodUrl: "https://star-linker.vercel.app",
   },
   {
     title: "Hero Wallet",

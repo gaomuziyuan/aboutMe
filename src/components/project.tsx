@@ -47,7 +47,7 @@ export default function Project({
             ))}
           </ul>
         </div>
-        <a href="https://star-linker-frontend.vercel.app/">
+        <a href="https://star-linker.vercel.app">
           <Image
             src={imageUrl}
             alt="Project I worked on"
